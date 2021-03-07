@@ -1,7 +1,7 @@
-# Project - Flying Dutchman
+# Flying Dutchman
 ## Functional Requirements
 ### The system should provide functionality that allows all customers to:
-- [ ] See available items (open menu)
+- [X] See available items (open menu)
 - [ ] Order drinks - [ ]
 	- Single order
 	- Group order
@@ -53,16 +53,16 @@
 	- Tannins (for wine)
 
 ## Non-functional requirements
-24. An order can consist of up to ten items at the same time
-25. The bartender should immediately be notified when an item is running low
+- [ ] An order can consist of up to ten items at the same time
+- [ ] The bartender should immediately be notified when an item is running low
 (27.a)
 	- A warning should be given when there are less than five items left of a certain
 type
-26. The security notification should be accessible within three seconds (17)
+- [ ] The security notification should be accessible within three seconds (17)
 
 ## Additional details
-27. The interface must connect to the thematic background of the Pub
-28. Drinks should be listed with the following details:
+- [ ] The interface must connect to the thematic background of the Pub
+- [ ] Drinks should be listed with the following details:
 	- Beers
 		1. Name
 		2. Producer/Brewery
@@ -83,6 +83,6 @@ type
 		2. Strength
 		3. Contents/Recipe (for allergy purposes)
 		4. Serving size
-29. For the bartender and manager, the number of remaining servings should also
+- [ ] For the bartender and manager, the number of remaining servings should also
 be shown
-. It should be easy to see when an item is low in number
+	- It should be easy to see when an item is low in number
