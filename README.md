@@ -1,8 +1,8 @@
 # Project - Flying Dutchman
 ## Functional Requirements
 ### The system should provide functionality that allows all customers to:
-- [ ] See available items (open menu)
-2. Order drinks
+1. See available items (open menu) - [ ]
+2. Order drinks - [ ]
 	- Single order
 	- Group order
 		1. Group bill
