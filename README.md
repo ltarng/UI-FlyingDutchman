@@ -2,7 +2,7 @@
 ## Functional Requirements
 ### The system should provide functionality that allows all customers to:
 - [X] See available items (open menu)
-- [ ] Order drinks <ul>[ ]</ul>
+- [ ] Order drinks <ul><li>[ ]</li></ul>
 	- Single order
 	- Group order
 		1. Group bill
