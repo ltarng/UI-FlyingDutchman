@@ -10,7 +10,7 @@
 - [ ] {Order food}
 - [ ] Change order
 - [ ] Pay at bar, or to bartender/waiter/waitress at table
-	- {See 2.b.ii - splitting the bill}
+	- {See above - split bill}
 
 ### VIP customers should also be able to:
 - [ ] Log in (at table)
