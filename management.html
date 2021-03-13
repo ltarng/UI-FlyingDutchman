@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+    <title>Flying Dutchman - Management System</title>  
+    <!-- Used API for Flamenco font face-->
+    <link href="https://fonts.googleapis.com/css?family=Flamenco&display=swap" rel="stylesheet">
+    <link rel='icon' href='images/favicon.ico' type='image/x-icon'/ >
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="db_files/Beverages.js"></script>
+    <script type="text/javascript" src="db_files/Beverages_eng.js"></script>
+    <script type="text/javascript" src="db_files/DBLoaded.js"></script>
+    <script type="text/javascript" src="db_files/loader.js"></script>
+    <script type="text/javascript" src="db_files/language.js"></script>
+    <script type="text/javascript" src="db_files/model.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+<head>
+<body>
+    <header id="header">
+        <div class="topnav capitalize">
+            <div class="leftnav">
+                <a class="nav_title active capitalize" href="#" id="title">Flying Dutchman - Management System</a>
+            </div>
+           <div class="rightnav">
+                <a class="swed" href="#" id="swed"><img src="images/SwedenFlag.png" alt="swedishlogo" class="swedish_logo" ></a>
+                <a class="eng" href="#" id="eng"><img src="images/USBFlag.png" alt="engishlogo" class="english_logo"></a>  
+                <a href="#" id="login" class="capitalize"></a>
+           </div>
+        </div>
+    </header>
+    
+    <div id="container">
+        <div id="index_page_flying" class="flyingdutchmenship">
+            <img src="images/Flying dutchmen.png" alt="FlyingDutchmenimg" class="flying_dutchmen_img">
+        </div>
+        <div class="content">
+            <div id="index_page" class='table'>
+                <div class='cell'>
+                    <div class="page_desc">  
+                        <p id="desc1"></p>
+                        <p id="desc2"></p>
+                        <a class="buttonlink" id="orderNow" href="#"></a>
+                        <a class="buttonlink" id="bookNow" href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="order_page">
+                <div id="avalItemsMenu" class="avalItemsMenu">
+                </div>
+                <div class="table">
+                    <div class='cell'>
+                        <div class="prodDesc"> 
+                            <h2 id="avlItmsTitle"></h2> 
+                            
+                            <div id="availItems" class="availItems">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class='cell'>
+                        <div class="prodDesc"> 
+                            <h2 id="selItmsTitle"></h2> 
+                            <div id="selectedItems" class="selectedItems"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        
+    </div>
+    <footer class="footer">
+        <div class="copyright capitalize">
+            Copyright @ <span id="copyrightyear"></span>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/elements.js"></script>
+    <script type="text/javascript" src="js/uiController.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+</body>
+</html>
