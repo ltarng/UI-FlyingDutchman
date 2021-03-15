@@ -3,6 +3,7 @@ var htmlElements = {};
 
 $(function(){
     htmlElements = {
+        //index.html
         title: $('#title'),
         login: $('#login'),
         aboutUs: $('#about_us'),
@@ -20,6 +21,9 @@ $(function(){
         selItmsTitle: $("#selItmsTitle"),
         avalItemsMenu: $("#avalItemsMenu"),
         availItems: $("#availItems"),
-        selectedItems: $("#selectedItems")
+        selectedItems: $("#selectedItems"),
+        //management.html
+        manageStock: $('#manageStock'),
+        managePrice: $('#manageStock')
     };
 });

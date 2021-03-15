@@ -17,7 +17,9 @@ var language = {
         Reserve: "Reservations",
         AvalItmsTitle: "Available Items",
         SeleItmsTitle: "Selected Items",
-        drinkMenuItems: ["Beer", "Spirits", "Wine", "Whiskey"]
+        drinkMenuItems: ["Beer", "Spirits", "Wine", "Whiskey"],
+        ManageStock: "Manage Stock",
+        ManagePrice: "Manage Price"
     },
 
     swe: {
@@ -33,6 +35,8 @@ var language = {
         Reserve: "Reservationer",
         AvalItmsTitle: "Tillgängliga artiklar",
         SeleItmsTitle: "Valda objekt",
-        drinkMenuItems: ["Öl", "Sprit", "Vin", "Whisky"]
+        drinkMenuItems: ["Öl", "Sprit", "Vin", "Whisky"],
+        ManageStock: "Hantera Inventering",
+        ManagePrice: "Hantera Pris"
     }
 };
