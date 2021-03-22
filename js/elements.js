@@ -24,6 +24,6 @@ $(function(){
         selectedItems: $("#selectedItems"),
         //management.html
         manageStock: $('#manageStock'),
-        managePrice: $('#manageStock')
+        managePrice: $('#managePrice')
     };
 });
