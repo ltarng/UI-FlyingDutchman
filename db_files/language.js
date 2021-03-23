@@ -29,7 +29,9 @@ var language = {
         backCart:"To Order",
         buyNow:"To payment",
         undoText: "<- UNDO",
-        redoText: "REDO ->"
+        redoText: "REDO ->",
+        ManageStock: "Manage Stock",
+        ManagePrice: "Manage Price"
     },
 
     swe: {
@@ -57,6 +59,8 @@ var language = {
         backCart: "Att beställa",
         buyNow: "Till betalning",
         undoText: "<- ÅNGRA",
-        redoText: "GÖRA OM ->"
+        redoText: "GÖRA OM ->",
+        ManageStock: "Hantera Inventering",
+        ManagePrice: "Hantera Pris"
     }
 };

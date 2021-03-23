@@ -7,7 +7,7 @@ function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
+    for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
         while (c.charAt(0) == ' ') {
             c = c.substring(1);
@@ -19,7 +19,7 @@ function getCookie(cname) {
     return "";
 }
 
-function checkCookie(cname){
+function checkCookie(cname) {
     var user = getCookie(cname);
     if (user != "") {
         return true;
@@ -29,62 +29,59 @@ function checkCookie(cname){
 }
 
 //Sets cookie for the given session
-function setCookie(cname, value, hours){
+function setCookie(cname, value, hours) {
     var d = new Date();
-    d.setTime(d.getTime() + (hours*60*60*1000));                
-    document.cookie=cname+'='+value+';Expires='+d.toUTCString()+';';
+    d.setTime(d.getTime() + (hours * 60 * 60 * 1000));
+    document.cookie = cname + '=' + value + ';Expires=' + d.toUTCString() + ';';
 }
 
-$(function(){
-    htmlElements.title.click(() => setIndexPageData());
+$(function () {
+    htmlElements.title.click(() => setManagementPageData());
     htmlElements.englishIcon.click(() => changeToEng());
     htmlElements.swedishIcon.click(() => changeToSwed());
-    htmlElements.orderNow.click(() => setOrderPageData());
     htmlElements.manageStock.click(() => setStockPageData());
     setCopyrightYear();
     setLanguage();
-    setIndexPageData();
+    setManagementPageData();
 });
 
-function setLanguage(){
+function setLanguage() {
     let data = getCookie("langaugeSelected").trim();
-    if(data !== "" && parseInt(data) == 1) changeToSwed();
-    else changeToEng();  
+    if (data !== "" && parseInt(data) == 1) changeToSwed();
+    else changeToEng();
 }
 
-function changeToSwed(){
+function changeToSwed() {
     currentLanguage = 1;
     htmlElements.login.text(language.swe.Login);
     htmlElements.desc1.text(language.swe.Content);
-    htmlElements.desc2.text(language.swe.Content2);
-    htmlElements.orderNow.text(language.swe.Order);
-    htmlElements.bookNow.text(language.swe.Reserve);
     htmlElements.avalItmsTitle.text(language.swe.AvalItmsTitle);
     htmlElements.selItmsTitle.text(language.swe.SeleItmsTitle);
     htmlElements.avalItemsMenu.html(setmenuItems(language.swe.drinkMenuItems));
+
     htmlElements.manageStock.text(language.swe.ManageStock);
     htmlElements.managePrice.text(language.swe.ManagePrice);
-    setCookie("langaugeSelected", currentLanguage,3600);
+    setCookie("langaugeSelected", currentLanguage, 3600);
 }
-function changeToEng(){
+function changeToEng() {
     currentLanguage = 0;
     htmlElements.login.text(language.eng.Login);
     htmlElements.desc1.text(language.eng.Content);
-    htmlElements.desc2.text(language.eng.Content2);
-    htmlElements.orderNow.text(language.eng.Order);
-    htmlElements.bookNow.text(language.eng.Reserve);
     htmlElements.avalItmsTitle.text(language.eng.AvalItmsTitle);
     htmlElements.selItmsTitle.text(language.eng.SeleItmsTitle);
     htmlElements.avalItemsMenu.html(setmenuItems(language.eng.drinkMenuItems));
+    
     htmlElements.manageStock.text(language.eng.ManageStock);
     htmlElements.managePrice.text(language.eng.ManagePrice);
+    htmlElements.avalItmsTitle.text(language.eng.AvalItmsTitle);
+    htmlElements.stockList.html(setStockItems(language.eng.drinkMenuItems));
     setCookie("langaugeSelected", currentLanguage, 3600);
 }
-function setCopyrightYear(){
+function setCopyrightYear() {
     htmlElements.copyrightText.text(new Date().getFullYear())
 }
 
-function setmenuItems(menus){
+function setmenuItems(menus) {
     str = '';
     menus.forEach((item) => {
         str += `<div class="drinkType" onclick="displayAvailableItems(this);">${item}</div>`;
@@ -92,67 +89,79 @@ function setmenuItems(menus){
     return str;
 }
 
+function setStockItems(stocks) {
+    str = '';
+    stocks.forEach(
+        (item) => {
+            str += `<div class="drinkType" onclick="displayStockItems(this);">${item}</div>`;
+        }
+    )
+}
 
-function makeUiElementsNone(){
+function makeUiElementsNone() {
     $("#index_page_flying").hide();
     $(".content").children().each(function () {
         $(this).hide();
     });
 }
 
-function setIndexPageData(){
+function setManagementPageData() {
     //Make all elements disappear
     makeUiElementsNone();
 
     // Make index page elements display.
     $("#index_page_flying").show();
-    $("#index_page").show();
+    $("#management_page").show();
 }
 
-function setOrderPageData(){
-    //Make all elements disappear
-     makeUiElementsNone();
-    // Make order page elements display.
-    $("#order_page").show();
-    $(".drinkType")[0].click();
-}
-
-function setStockPageData(){
+function setStockPageData() {
     // Remove all elements
     makeUiElementsNone();
     // Display stock page elements
-    // $('#')
+    $('#stock_page').show();
+    $(".drinkType")[0].click();
 }
 
-
-function displayAvailableItems(elem){
+function displayAvailableItems(elem) {
     $(".drinkType").removeClass("active");
     $(elem).addClass("active");
-    let drinks =  getAllDrinkofType($(elem).text()).slice(0, displayItems);
+    let drinks = getAllDrinkofType($(elem).text()).slice(0, displayItems);
     console.log(drinks);
     htmlElements.availItems.empty();
     htmlElements.availItems.append(generateDrinksHtml(drinks));
 
 }
 
-function viewProductList(){
-    
+function displayStockItems(elem) {
+    $(".drinkType").removeClass("active");
+    $(elem).addClass("active");
+    let stocks = getAllStock($(elem).text()).slice(0, displayItems);
+    console.log(stocks);
+    htmlElements.stockItems.empty();
+    htmlElements.stockItems.append(generateDrinksHtml(stocks));
+
 }
 
-function display_product_menu(){
+function generateStocksHtml(stocks) {
+    let html = ``;
 
+    stocks.forEach((stock) => {
+        html += `
+        <div draggable="true" id="${stock.nr}"> 
+        <div  class="stockItemTitle"> ${stock.name}</div>
+        <span class="availItemAlchPer">${stock.alcoholstrength}</span>
+        <span class="availItemPrice"> ${stock.priceinclvat}</span><br>
+        </div>
+        `;
+    });
+    return html;
 }
 
-function remove_product_from_menu(){
-    
-}
-
-
-function generateDrinksHtml(drinks){
+function generateDrinksHtml(drinks) {
     let html = ``;
 
     drinks.forEach((drink) => {
-        html +=`
+        html += `
         <div draggable="true" id="${drink.nr}"> 
         <div  class="availItemTitle"> ${drink.name}</div>
         <span class="availItemAlchPer">${drink.alcoholstrength}</span>
