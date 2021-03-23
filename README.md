@@ -2,23 +2,23 @@
 ## Functional Requirements
 ### The system should provide functionality that allows all customers to:
 - [X] See available items (open menu)
-- [ ] Order drinks
+- [X] Order drinks
 	- Single order
 	- Group order
 		1. Group bill
 		2. {Split bill}
-- [ ] {Order food}
-- [ ] Change order
-- [ ] Pay at bar, or to bartender/waiter/waitress at table
+- [X] {Order food}
+- [X] Change order
+- [X] Pay at bar, or to bartender/waiter/waitress at table
 	- {See above - split bill}
 
 ### VIP customers should also be able to:
-- [ ] Log in (at table)
-- [ ] Log out
-- [ ] See account balance (at table)
-- [ ] Order and Pay from account (at table)
-- [ ] Fetch special beer/drink from fridge or bar (with combination lock)
-- [ ] Add to account (at bar)
+- [X] Log in (at table)
+- [X] Log out
+- [X] See account balance (at table)
+- [X] Order and Pay from account (at table)
+- [X] Fetch special beer/drink from fridge or bar (with combination lock)
+- [X] Add to account (at bar)
 
 ### Bartender, Waiter and Waitress should be able to:
 - [ ] Log in
