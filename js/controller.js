@@ -94,41 +94,16 @@ $(function(){
     }
     
     function displaySuccess(text, modal){
-        let successAlert = `
-        <div id="alert-box" data-closable class="alert-box callout success">
-             <span>${text}<span>
-         </div>
-         `;
-         $('body').append(successAlert);
-        setTimeout(() => {
-            $("#alert-box").remove();
-            closeModal(modal);
-        }, 2000);
+        createSuccessNotification(text);
+        closeModal(modal);
     }
 
     function displayFailed(text){
-        let failedAlert = `
-        <div id="alert-box" data-closable class="alert-box callout alert">
-             <span>${text}<span>
-         </div>
-         `;
-         $('body').append(failedAlert);
-            setTimeout(() => {
-            $("#alert-box").remove();
-        }, 2000);
-
+        createErrorNotification(text);
     }
 
     function displayWarning(text){
-        let warningAlert = `
-        <div id="alert-box" data-closable class="alert-box callout warning">
-             <span>${text}<span>
-         </div>
-         `;
-         $('body').append(warningAlert);
-            setTimeout(() => {
-            $("#alert-box").remove();
-        }, 2000);
+        createWarningNotification(text);
         $("#uname").focus();
     }
 
@@ -144,6 +119,9 @@ $(function(){
             container.classList.remove("is-blurred");
             container.parentElement.classList.remove("ModalOpen");
     }
+
+
+    
 
 });
 
