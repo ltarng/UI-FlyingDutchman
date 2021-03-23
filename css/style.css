@@ -40,7 +40,7 @@ body {
     bottom:0px;
     margin: 2%;
 }
-.copyright{
+.copyright, .emptyCartText, .undoText, .redoText{
     /* Copyright @ 2021 */
     /* position: absolute; */
     width: 165px;
@@ -54,6 +54,21 @@ body {
     line-height: 25px;
     /* identical to box height */
     color: #FFC90A;
+}
+
+.undoredoButtons{
+  width: fit-content;
+}
+
+.undoButton, .redoButton{
+  width: max-content;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.emptyCartText{
+  color: #ff4400;
 }
 
 /* Add a black background color to the top navigation */
@@ -104,7 +119,11 @@ body {
     width: 36px;
     height: 36px;
 }
-
+.cart{
+  position: relative;
+  text-align: center;
+  color: white;
+}
 
 
 .flying_dutchmen_img{
@@ -320,6 +339,11 @@ body {
   height:100%;
   table-layout:fixed;
 }
+
+.row{
+  display: table-row;
+}
+
 .cell {
   display:table-cell;
   vertical-align:middle;
@@ -338,7 +362,7 @@ body {
   display:inline-block;
 }
 
-.page_desc > p{
+.page_desc > p, .cardPaymentText, .swishPaymentText, .cashPaymentText{
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -346,6 +370,10 @@ body {
   color: #FFC90A;
 }
 
+.cardPaymentText, .swishPaymentText, .cashPaymentText{
+  font-size: 20px;
+  line-height: 20px;
+}
 .buttonlink{
 	display:block;
 	width:9em;
@@ -372,13 +400,21 @@ body {
   border: 2px solid  #FFC90A;
   display:inline-block;
   width: 500px;
-  height: 500px ; /* real browsers */
+  height: 498px ; /* real browsers */
+  min-height: 100%; /* real browsers */
+  /* padding:1em 1em 5em; */
+}
+
+.paymentDesc{
+  display:inline-block;
+  width: 500px;
+  height: 400px ; /* real browsers */
   min-height: 100%; /* real browsers */
   /* padding:1em 1em 5em; */
 }
 
 
-.prodDesc > h2{
+.prodDesc > h2 , .paymentDesc > h2{
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -428,4 +464,173 @@ body {
   font-size: 20px;
   line-height: 49px;
   color: #3adb76;
+}
+
+.availItemsMain{
+  clear: both;
+}
+
+.availItems, .selectedItems{
+  overflow-y: auto;
+  height: inherit;
+  /* min-height: 450px; */
+  max-height: 450px;
+}
+
+.priceMenu{
+  float: left;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 49px;
+  color: #FFC90A;
+  padding: 0px 10px 2px 10px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+/*Scroll Bar*/
+
+.availItems, .selectedItems {
+  --scrollbarBG: #ffeabe;
+  --thumbBG: #e39e56;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.availItems::-webkit-scrollbar, .selectedItems::-webkit-scrollbar {
+  width: 11px;
+}
+.availItems::-webkit-scrollbar-track, .selectedItems::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+.availItems::-webkit-scrollbar-thumb, .selectedItems::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+.priceVal{
+  color: #3adb76;
+}
+
+.priceCheckout{
+  float: right;
+}
+.proceedCart{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 49px;
+  color: #ff4e0a;
+  float: right;
+  padding: 0px 10px 2px 10px;
+  border: 1px solid #f9d45233;
+  margin-bottom: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+/* Top right text */
+.top-right {
+  position: absolute;
+    top: 10px;
+    right: 7px;
+    color: #f4f4f4;
+    border: 1px solid red;
+    border-radius: 100%;
+    background: red;
+    height: auto;
+    font-size: 20px;
+    width: 15px;
+    height: 15px;
+    line-height: 8px;
+}
+
+
+.emptyCartContent{
+  display: block;
+    margin-right: auto;
+    margin-left: auto;
+    /* width: 50%; */
+    position: absolute;
+    /* width: 300px; */
+    /* height: 200px; */
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -145px 0 0 -150px;
+    /* background: red;*/
+}
+
+.continueShopping{
+  color: aqua;
+  text-decoration: none;
+}
+
+.continueShopping:hover{
+  color: aqua;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.cartItemRight{
+  float: right;
+}
+.cartItemRight > .availItemPrice{
+  float: left;
+}
+.deleteCartItem{
+  color: red;
+  float: right;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 53px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.master_card_image, .visa_card_image, .swish_image, .cash_image{
+  width: 45px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+.paymentMethods{
+  height: fit-content;
+}
+.cardPayment, .swishPayment, .codPayment{
+  height: 50px;
+  padding: 10px;
+}
+
+
+.cartbutton{
+    display: inline-block;
+    /* position: absolute; */
+    /* left: 50%; */
+    width: 460px;
+    text-align: left;
+    padding: 50px 0;
+    /* border: 2px solid #FFC90A; */
+}
+
+.textCell{
+  text-align: left;
+}
+
+.backCart{
+  border: 0px solid #e55d29; 
+  color: #ffffff;
+  /* background: #e58967; */
+  width: 5em;
+  text-align: end;
+  text-decoration: underline;
+}
+
+.buyNow{
+  border: 0px solid #4eeb2f; 
+  width: 5em;
+  color: #3adb76;
+  text-align: end;
+  text-decoration: underline;
 }

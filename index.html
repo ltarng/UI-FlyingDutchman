@@ -4,7 +4,7 @@
     <title>Flying Dutchman</title>  
     <!-- Used API for Flamenco font face-->
     <link href="https://fonts.googleapis.com/css?family=Flamenco&display=swap" rel="stylesheet">
-    <link rel='icon' href='images/favicon.ico' type='image/x-icon'/ >
+    <link rel='icon' href='images/favicon.ico' type='image/x-icon'>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="db_files/Beverages.js"></script>
     <script type="text/javascript" src="db_files/Beverages_eng.js"></script>
@@ -26,7 +26,7 @@
                 
             </div>
            <div class="rightnav">
-                <a class="cart" href="#" id="cart"><img src="images/cart.png" alt="cartlogo" class="cart_logo"></a>
+                <a class="cart" href="#" id="cart"><img src="images/cart.png" alt="cartlogo" class="cart_logo"><div class="top-right" id="cartNumber"></div></a>
                 <a class="swed" href="#" id="swed"><img src="images/SwedenFlag.png" alt="swedishlogo" class="swedish_logo" ></a>
                 <a class="eng" href="#" id="eng"><img src="images/USBFlag.png" alt="engishlogo" class="english_logo"></a>  
                 <a href="#" id="login" class="capitalize"></a>
@@ -50,26 +50,100 @@
                 </div>
             </div>
             <div id="order_page">
-                <div id="avalItemsMenu" class="avalItemsMenu">
+                <div>
+                    <div id="avalItemsMenu" class="avalItemsMenu"></div>
+                    <div class="priceCheckout">
+                        <div id="priceMenu" class="priceMenu"><span id="priceText" class="priceText"></span>: <span id="priceVal" class="priceVal"></span> SEK</div>
+                        <div class="proceedCart" id="proceedCart">
+                            <span id="proceedCartText" class="proceedCartText"></span>
+                        </div>
+                    </div>
+                   
                 </div>
                 <div class="table">
                     <div class='cell'>
                         <div class="prodDesc"> 
                             <h2 id="avlItmsTitle"></h2> 
-                            
-                            <div id="availItems" class="availItems">
-                               
-                            </div>
+                            <div id="availItems" class="availItems"></div>
+                        </div>
+                    </div>
+                    <div class="cell undoredoButtons">
+                        <div class="undoButton" id="undoButton">
+                            <span id="undoText" class="undoText"></span>
+                        </div>
+                        <div class="redoButton" id="redoButton">
+                            <span id="redoText" class="redoText"></span>
                         </div>
                     </div>
                     <div class='cell'>
-                        <div class="prodDesc"> 
+                        <div class="prodDesc" ondrop="drop(event)" ondragover="allowDrop(event)"> 
                             <h2 id="selItmsTitle"></h2> 
-                            <div id="selectedItems" class="selectedItems"></div>
+                            <div id="selectedItems"  class="selectedItems"></div>
                         </div>
                     </div>
                 </div>
-            </div>   
+                
+            </div>
+            <div id="empty_cart_page">
+                <div class="emptyCartContent">
+                    <img src="images/empty-cart.png" alt="Empty Cart Image" class="empty_cart_img"><br />
+                    <span id="emptyCartText" class="emptyCartText"></span><br />
+                    <a href="#" id="continueShopping" class="capitalize continueShopping"></a>
+                </div>
+            </div>  
+            <div id="cart_page">
+                <div class="table">
+                    <div class='cell'>
+                        <div class="prodDesc"> 
+                            <h2 id="selItmsTitleCart"></h2> 
+                            <div id="selectedItemsCart" class="selectedItems"></div>
+                        </div>
+                    </div>
+                    <div class='cell'>
+                        <div class="paymentDesc">
+                            <div class="cartPriceDetails row">
+                                <div id="" class="priceMenu"><span id="priceTextCart" class="priceText"></span>: <span id="priceValCart" class="priceVal"></span> SEK</div>
+                            </div>
+                            <br />
+                            <h2 id="paymentTitle"></h2> 
+                            <div class="paymentMethods table">
+                                <div class="cardPayment row">
+                                    <div class="cell">
+                                        <input type="radio" id="card" name="payment" value="1">
+                                    </div>
+                                    <div class="cell textCell">
+                                        <span class="cardPaymentText" id="cardPaymentText"></span>
+                                        <img src="images/MasterCard.png" alt="Master Card Image" class="master_card_image">
+                                        <img src="images/VisaCard.png" alt="Visa Card Image" class="visa_card_image">
+                                    </div>
+                                </div>
+                                <div class="swishPayment row">
+                                    <div class="cell">
+                                        <input type="radio" id="swish" name="payment" value="2">
+                                    </div>
+                                    <div class="cell textCell">
+                                        <span class="swishPaymentText" id="swishPaymentText"></span>
+                                        <img src="images/Swish.png" alt="Swish Card Image" class="swish_image">
+                                    </div>
+                                </div>
+                                <div class="codPayment row">
+                                    <div class="cell">
+                                        <input type="radio" id="cod" name="payment" value="3">
+                                    </div>
+                                    <div class="cell textCell">
+                                        <span class="cashPaymentText" id="cashPaymentText"></span>
+                                        <img src="images/Cash.png" alt="Cash Card Image" class="cash_image">
+                                    </div>
+                                </div>
+                                <div class="cartbutton row">
+                                    <a class="buttonlink backCart" id="backCart" href="#"></a>
+                                    <a class="buttonlink buyNow" id="buyNow" href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
         </div>
         
     </div>

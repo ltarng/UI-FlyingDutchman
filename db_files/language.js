@@ -18,8 +18,18 @@ var language = {
         AvalItmsTitle: "Available Items",
         SeleItmsTitle: "Selected Items",
         drinkMenuItems: ["Beer", "Spirits", "Wine", "Whiskey"],
-        ManageStock: "Manage Stock",
-        ManagePrice: "Manage Price"
+        priceText: "Price",
+        proceedCartText: "Cart",
+        emptyCartText: "Unfortunately, Your Cart is Empty.",
+        continueShopping: "Continue Shopping",
+        paymentTitle: "Select Payment Type",
+        cardPaymentText: "Card Payment",
+        swishPaymentText: "Swish",
+        cashPaymentText: "Cash",
+        backCart:"To Order",
+        buyNow:"To payment",
+        undoText: "<- UNDO",
+        redoText: "REDO ->"
     },
 
     swe: {
@@ -36,7 +46,17 @@ var language = {
         AvalItmsTitle: "Tillgängliga artiklar",
         SeleItmsTitle: "Valda objekt",
         drinkMenuItems: ["Öl", "Sprit", "Vin", "Whisky"],
-        ManageStock: "Hantera Inventering",
-        ManagePrice: "Hantera Pris"
+        priceText: "Pris",
+        proceedCartText: "Vagn",
+        emptyCartText: "Tyvärr är din kundvagn tom.",
+        continueShopping: "Fortsätt handla",
+        paymentTitle: "Välj Betalningstyp",
+        cardPaymentText: "Kortbetalning",
+        swishPaymentText: "Swish",
+        cashPaymentText: "Kontanter",
+        backCart: "Att beställa",
+        buyNow: "Till betalning",
+        undoText: "<- ÅNGRA",
+        redoText: "GÖRA OM ->"
     }
 };
