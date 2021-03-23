@@ -57,7 +57,7 @@ function changeToSwed() {
     htmlElements.desc1.text(language.swe.Content);
 
     // htmlElements.stockItemsTable.html(setStockItems(language.swe.drinkMenuItems));
-    htmlElements.stockChangeConfirmButton.text(language.swe.StockChangeConfirmButton);
+    htmlElements.stockChangeConfirmButton.text(language.swe.stockChangeConfirmButton);
     htmlElements.stockItemsTable.html(setStockItems(language.swe.stockItemDescription));
     setCookie("langaugeSelected", currentLanguage, 3600);
 }
@@ -67,7 +67,7 @@ function changeToEng() {
     htmlElements.login.text(language.eng.Login);
     htmlElements.desc1.text(language.eng.Content);
 
-    htmlElements.stockChangeConfirmButton.text(language.eng.StockChangeConfirmButton);
+    htmlElements.stockChangeConfirmButton.text(language.eng.stockChangeConfirmButton);
     htmlElements.stockItemsTable.html(setStockItems(language.eng.stockItemDescription));
     setCookie("langaugeSelected", currentLanguage, 3600);
 }
@@ -106,7 +106,6 @@ function displayStockItems(elem){
 
 function generateStocksHtml(stocks){
     let html = ``;
-
     stocks.forEach((stock) => {
         html +=`
         <div draggable="true" class="stockItemsMain" ondragstart="drag(event)" id="${stock.nr}"> 

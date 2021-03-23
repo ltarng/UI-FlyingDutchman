@@ -638,7 +638,7 @@ body {
 .changeButton{
   /* margin-left: 400px; */
   width: 400px;
-  padding:5px;
+  padding:1px;
   display:inline-block;
 }
 
@@ -646,18 +646,18 @@ body {
   border: 2px solid  #FFC90A;
   display:inline-block;
   width: 75%;
-  height: 430px; /* real browsers */
+  height: 300px; /* real browsers */
   min-height: 100%; /* real browsers */
-  padding:1em 1em 5em;
+  /* padding:1em 1em 5em; */
 }
-
+/* 
 .stockItemsTable > h2 , .paymentDesc > h2{
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
   line-height: 49px;
   color: #FFC90A;
-}
+} */
 
 .stockItemsType{
   font-style: normal;

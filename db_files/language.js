@@ -30,7 +30,8 @@ var language = {
         buyNow:"To payment",
         undoText: "<- UNDO",
         redoText: "REDO ->",
-        StockChangeConfirmButton: "Save Changes"
+        stockChangeConfirmButton: "Save Changes",
+        stockItemDescription: ["Name of Item", "Amounts", "In Menu?", "Price"]
     },
 
     swe: {
@@ -59,6 +60,7 @@ var language = {
         buyNow: "Till betalning",
         undoText: "<- ÅNGRA",
         redoText: "GÖRA OM ->",
-        StockChangeConfirmButton: "Spara ändringar"
+        stockChangeConfirmButton: "Spara ändringar",
+        stockItemDescription: ["Namn på objekt", "belopp", "i menyn?", "Pris"]
     }
 };
