@@ -44,10 +44,9 @@ $(function(){
         undoButton:$("#undoButton"),
         redoButton:$("#redoButton"),
         //management.html
-        manageStock: $('#manageStock'),
-        managePrice: $('#managePrice'),
-        stockItemsList: $('#stockItemsList'),
-        stockTitle: $('#stockTitle'),
-        stockItems: $('#stockItems')
+        stockItemsTable: $('#stockItemsTable'),
+        stockItmsTitle: $('#stockItmsTitle'),
+        stockItems: $('#stockItems'),
+        stockChangeConfirmButton: $('#stockChangeConfirmButton')
     };
 });

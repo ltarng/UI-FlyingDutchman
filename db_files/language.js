@@ -30,8 +30,7 @@ var language = {
         buyNow:"To payment",
         undoText: "<- UNDO",
         redoText: "REDO ->",
-        ManageStock: "Manage Stock",
-        ManagePrice: "Manage Price"
+        StockChangeConfirmButton: "Save Changes"
     },
 
     swe: {
@@ -60,7 +59,6 @@ var language = {
         buyNow: "Till betalning",
         undoText: "<- ÅNGRA",
         redoText: "GÖRA OM ->",
-        ManageStock: "Hantera Inventering",
-        ManagePrice: "Hantera Pris"
+        StockChangeConfirmButton: "Spara ändringar"
     }
 };
