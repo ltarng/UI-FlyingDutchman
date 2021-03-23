@@ -31,7 +31,7 @@ var language = {
         undoText: "<- UNDO",
         redoText: "REDO ->",
         stockChangeConfirmButton: "Save Changes",
-        stockItemDescription: ["Name of Item", "Amounts", "In Menu?", "Price"]
+        stockItemDescription: ["Item Name", "Amounts", "In Menu?", "Price"]
     },
 
     swe: {
@@ -61,6 +61,6 @@ var language = {
         undoText: "<- ÅNGRA",
         redoText: "GÖRA OM ->",
         stockChangeConfirmButton: "Spara ändringar",
-        stockItemDescription: ["Namn på objekt", "belopp", "i menyn?", "Pris"]
+        stockItemDescription: ["Föremålsnamn", "Bselopp", "I menyn? ", "Pris"]
     }
 };
