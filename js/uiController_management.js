@@ -56,8 +56,9 @@ function changeToSwed() {
     htmlElements.login.text(language.swe.Login);
     htmlElements.desc1.text(language.swe.Content);
 
-    htmlElements.stockItemsTable.html(setStockItems(language.eng.drinkMenuItems));
+    // htmlElements.stockItemsTable.html(setStockItems(language.swe.drinkMenuItems));
     htmlElements.stockChangeConfirmButton.text(language.swe.StockChangeConfirmButton);
+    htmlElements.stockItemsTable.html(setStockItems(language.swe.stockItemDescription));
     setCookie("langaugeSelected", currentLanguage, 3600);
 }
 
@@ -66,8 +67,8 @@ function changeToEng() {
     htmlElements.login.text(language.eng.Login);
     htmlElements.desc1.text(language.eng.Content);
 
-    htmlElements.stockItemsTable.html(setStockItems(language.eng.drinkMenuItems));
     htmlElements.stockChangeConfirmButton.text(language.eng.StockChangeConfirmButton);
+    htmlElements.stockItemsTable.html(setStockItems(language.eng.stockItemDescription));
     setCookie("langaugeSelected", currentLanguage, 3600);
 }
 
@@ -83,28 +84,24 @@ function makeUiElementsNone() {
 }
 
 function setManagementPageData() {
-    //Make all elements disappear
     makeUiElementsNone();
-
-    // Make index page elements display.
     $("#stockTable").show();
 }
 
 function setStockItems(stocks){
     str = '';
     stocks.forEach((item) => {
-        str += `<div class="drinkType" onclick="displayStockItems(this);">${item}</div>`;
+        str += `<div class="stockItemsType" onclick="displayStockItems(this);">${item}</div>`;
     });
     return str;
 }
 
 function displayStockItems(elem){
-    $(".stockTable").removeClass("active");
+    $(".stockItemsType").removeClass("active");
     $(elem).addClass("active");
-    let stocks =  getAllStock($(elem).text()).slice(0, displayItems);
+    let stocks =  getAllDrinkofType($(elem).text()).slice(0, displayItems); //Temp, need to catch the db data
     htmlElements.stockItems.empty();
     htmlElements.stockItems.append(generateStocksHtml(stocks));
-
 }
 
 function generateStocksHtml(stocks){
